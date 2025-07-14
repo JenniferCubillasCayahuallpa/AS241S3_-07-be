@@ -13,7 +13,6 @@ import java.util.List;
 
 @RequestScope
 @Slf4j
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/v1/api/student")
 public class StudentRest {

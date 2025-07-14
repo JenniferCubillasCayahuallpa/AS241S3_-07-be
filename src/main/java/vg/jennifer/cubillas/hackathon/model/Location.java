@@ -5,20 +5,20 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Locations")
+@Table(name = "locations")
 public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "LocationID")
+    @Column(name = "location_id")  // Cambiado
     private Integer id;
 
-    @Column(name = "Department")
+    @Column(name = "department")
     private String department;
 
-    @Column(name = "Province")
+    @Column(name = "province")
     private String province;
 
-    @Column(name = "District")
+    @Column(name = "district")
     private String district;
 }
