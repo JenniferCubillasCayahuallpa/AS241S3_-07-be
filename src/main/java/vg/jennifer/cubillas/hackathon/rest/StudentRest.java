@@ -39,13 +39,13 @@ public class StudentRest {
 
     // Obtener estudiantes por estado (A=activo, I=inactivo)
     @GetMapping("/status/active")
-    public ResponseEntity<List<Student>> findByStatusActive() {
-        return studentService.findByStatus("A")
+    public List<Student> findByStatusActive() {
+        return studentService.findByStatus("A");
     }
 
     @GetMapping("/status/inactive")
-    public ResponseEntity<List<Student>> findByStatusInactive() {
-        return studentService.findByStatus("I")
+    public List<Student> findByStatusInactive() {
+        return studentService.findByStatus("I");
     }
     
 
