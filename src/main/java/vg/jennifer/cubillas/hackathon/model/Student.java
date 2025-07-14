@@ -7,47 +7,47 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "Students")
+@Table(name = "students")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "StudentID")
+    @Column(name = "student_id")
     private Long id;
 
-    @Column(name = "DNI", nullable = false, length = 8, unique = true)
+    @Column(name = "dni", nullable = false, length = 8, unique = true)
     private String dni;
 
-    @Column(name = "FirstName", nullable = false)
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "LastName", nullable = false)
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "BirthDate", nullable = false)
+    @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
 
-    @Column(name = "Gender", nullable = false, length = 1)
+    @Column(name = "gender", nullable = false, length = 1)
     private String gender;
 
-    @Column(name = "Email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "Phone", length = 9)
+    @Column(name = "phone", length = 9)
     private String phone;
 
-    @Column(name = "Address")
+    @Column(name = "address")
     private String address;
 
-    @Column(name = "RegistrationDate")
+    @Column(name = "registration_date")
     private LocalDateTime registrationDate;
 
-    @Column(name = "Status", nullable = false, length = 1)
+    @Column(name = "status", nullable = false, length = 1)
     private String status;
 
-    @Column(name = "ProgramID", nullable = false)
+    @Column(name = "program_id", nullable = false)
     private Integer programId;
 
-    @Column(name = "LocationID", nullable = false)
+    @Column(name = "location_id", nullable = false)
     private Integer locationId;
 }
