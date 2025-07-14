@@ -38,16 +38,16 @@ public class StudentRest {
     }
 
     // Obtener estudiantes por estado (A=activo, I=inactivo)
-    @GetMapping("/status/{status}")
-    public ResponseEntity<List<Student>> findByStatus(@PathVariable String status) {
-        try {
-            List<Student> students = studentService.findByStatus(status);
-            return ResponseEntity.ok(students);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(500).body(null);
-        }
+    @GetMapping("/status/active")
+    public ResponseEntity<List<Student>> findByStatusActive() {
+        return studentService.findByStatus("A")
     }
+
+    @GetMapping("/status/inactive")
+    public ResponseEntity<List<Student>> findByStatusInactive() {
+        return studentService.findByStatus("I")
+    }
+    
 
     // Obtener estudiante por ID
     @GetMapping("/{id}")
